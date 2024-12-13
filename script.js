@@ -14,7 +14,7 @@ roleSelector.onchange = (event) => {
   socket.send(JSON.stringify({ type: 'role', role }));
 };
 
-const socket = new WebSocket(Deno.env.get("WEBSOCKET_URL"));
+const socket = new WebSocket('wss://casli-rj-mod-72.deno.dev');
 
 socket.onopen = () => {
   console.log("WebSocket connection established.");
